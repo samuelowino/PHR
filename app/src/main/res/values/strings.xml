@@ -1,3 +1,31 @@
 <resources>
+    <!-- Global text -->
     <string name="app_name">mUzima PHR</string>
+
+    <!-- Landing page text -->
+
+    <!-- Navigation drawer text -->
+    <string name="profile_menu_text">Profile</string>
+    <string name="primary_notifications_text">Primary Notifications</string>
+    <string name="active_notifications_text">Active Notifications</string>
+    <string name="settings_text">Settings</string>
+    <string name="help_and_feedback_text">Help and Feedback</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="deactivated_notifications">Deactivated notifications</string>
+
+    <!-- landing page text -->
+    <string name="data_text">Data</string>
+    <string name="forms_text">Forms</string>
+    <string name="notifications_text">Notifications</string>
+    <string name="profile_text">Profile</string>
+    <string name="welcome_message_text">For Patients</string>
+
+
+    <!-- temp text -->
+    <string name="fake_user">muzimaphr@user.com</string>
+    <string name="notifications_stats_text">2 unread</string>
+    <string name="data_stats">Sync started</string>
+    <string name="profile_stats">View profile</string>
+    <string name="forms_stats">6 Complete 3 Drafts</string>
 </resources>

@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:title="@string/app_name"
             app:theme="@style/ToolbarTheme"
-            android:background="@color/colorPrimary"
+            android:background="@color/colorPrimaryDark"
             android:layout_height="?attr/actionBarSize">
 
         </android.support.v7.widget.Toolbar>
@@ -24,13 +24,9 @@
         <RelativeLayout
             android:id="@+id/landing_page_relative_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/landing_page_recycler_view"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scrollbars="vertical" />
+            <include layout="@layout/landing_page_layout"/>
 
         </RelativeLayout>
     </LinearLayout>
