@@ -26,6 +26,9 @@
     <string name="provider_entered_data_text">Provider entered data</string>
     <string name="phr_data_text">mUzima PHR Data</string>
 
+    <!-- Notifications view text -->
+    <string name="phr_notifications">PHR Notifications</string>
+
     <!-- mUzima PHR Forms text -->
     <string name="phr_forms_text">PHR Forms</string>
 
