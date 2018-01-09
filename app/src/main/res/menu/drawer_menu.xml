@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/username"
+        android:id="@+id/profile_menu_item"
         android:icon="@drawable/ic_action_user"
         android:checkable="true"
         android:title="@string/profile_menu_text"/>
     <item
-        android:id="@+id/primary_notifications"
+        android:id="@+id/primary_notifications_menu_item"
         android:checkable="true"
         android:icon="@drawable/ic_action_primary_notification"
         android:title="@string/primary_notifications_text"/>
     <item
-        android:id="@+id/active_notifications_menu"
+        android:id="@+id/active_notifications_menu_menu_item"
         android:checkable="true"
         android:icon="@drawable/ic_action_active_notifications"
         android:title="@string/active_notifications_text"/>
 
     <item
-        android:id="@+id/deactivated_notifications"
+        android:id="@+id/deactivated_notifications_menu_item"
         android:checkable="true"
         android:icon="@drawable/ic_action_deactivated_notifications"
-        android:title="@string/active_notifications_text"/>
+        android:title="@string/deactivated_notifications"/>
+
+    <item
+        android:id="@+id/forms_menu_item"
+        android:icon="@drawable/ic_action_form"
+        android:title="@string/forms_text"/>
 
     <item
         android:id="@+id/settings_menu_item"
