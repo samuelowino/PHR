@@ -9,9 +9,7 @@
         android:roundIcon="@drawable/ic_action_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".DataViewActivity" />
         <activity android:name=".FormsViewActivity" />
         <activity android:name=".ProfileViewActivity" />
@@ -24,6 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".InitialSetupActivity"></activity>
     </application>
 
 </manifest>

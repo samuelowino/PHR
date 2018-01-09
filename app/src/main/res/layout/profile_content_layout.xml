@@ -1,53 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_marginEnd="8dp"
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/openmrsid_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/last_name_editText"
+        android:layout_marginTop="24dp"
+        android:text=""
+        android:layout_marginEnd="16dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/openmrsid_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phr_version_text"
+        android:layout_alignBaseline="@+id/middle_name_textView"
+        android:layout_alignBottom="@+id/middle_name_textView"
+        android:layout_alignStart="@+id/last_name_editText"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/profile_first_name_textView"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:text="Name"
+        android:text="OpenMRS ID"
+        android:paddingLeft="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="4dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <TextView
-        android:text="Samuel Owino"
+    <EditText
+        android:id="@+id/profile_fast_name_editText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/profile_first_name_textView"
+        android:layout_alignBottom="@+id/profile_first_name_textView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/phr_version_text"
+        android:inputType="number" />
 
     <TextView
+        android:id="@+id/last_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/profile_fast_name_editText"
+        android:layout_marginTop="28dp"
+        android:paddingLeft="16dp"
+        android:text="First Name"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/last_name_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phr_version_text"
+        android:layout_alignBaseline="@+id/last_name_textView"
+        android:layout_alignBottom="@+id/last_name_textView"
+        android:layout_alignStart="@+id/profile_fast_name_editText"
+        android:inputType="textAutoComplete" />
+
+    <TextView
+        android:id="@+id/middle_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/openmrsid_textView"
+        android:layout_alignBottom="@+id/openmrsid_textView"
+        android:layout_toEndOf="@+id/openmrsid_textView"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:text="Number of Visits"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="4dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:text="Middle Name" />
 
     <TextView
-        android:text="4 visits"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/openmrsid_editText"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@+id/openmrsid_textView"
+        android:text="Last Name"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:text="Number of Pending Visits"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="4dp"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:id="@+id/lname_editText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignStart="@+id/openmrsid_editText"
+        android:text="@string/phr_version_text"
+        android:inputType="text" />
 
     <TextView
-        android:text="16 visits"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lname_editText"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@+id/openmrsid_textView"
+        android:text="DoB"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/dob_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lname_editText"
+        android:layout_below="@+id/lname_editText"
+        android:text="1993/04/11"
+        android:inputType="date" />
 
 
-</LinearLayout>
+
+</RelativeLayout>
