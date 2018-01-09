@@ -70,7 +70,7 @@ public class FormsViewActivity extends AppCompatActivity {
          * TODO create individual form view activity
          */
         if (item.getItemId() == android.R.id.home) {
-            Intent mainActivityIntent = new Intent(this, DataViewActivity.class);
+            Intent mainActivityIntent = new Intent(this, MainActivity.class);
             startActivity(mainActivityIntent);
         }
         return super.onOptionsItemSelected(item);

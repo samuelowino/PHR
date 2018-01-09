@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         landingScreenDrawerLayout = findViewById(R.id.landing_screen_drawer_layout);
         dataCardView = findViewById(R.id.data_cardView);
         formsCardView = findViewById(R.id.forms_cardView);
+        profileCardView = findViewById(R.id.cardView2);
         setSupportActionBar(landingScreenToolbar);
 
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, landingScreenDrawerLayout, landingScreenToolbar, R.string.open, R.string.close);
@@ -53,6 +54,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(),FormsViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        profileCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),ProfileViewActivity.class);
                 startActivity(intent);
             }
         });

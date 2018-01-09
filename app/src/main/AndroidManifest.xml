@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".DataViewActivity" />
-        <activity android:name=".FormsViewActivity"></activity>
+        <activity android:name=".FormsViewActivity" />
+        <activity android:name=".ProfileViewActivity"></activity>
     </application>
 
 </manifest>
