@@ -21,6 +21,10 @@
     <string name="profile_text">Profile</string>
     <string name="welcome_message_text">For Patients</string>
 
+    <!-- data category selection view text -->
+    <string name="self_entered_data_text">Self entered data</string>
+    <string name="provider_entered_data_text">Provider entered data</string>
+    <string name="phr_data_text">mUzima PHR Data</string>
 
     <!-- temp text -->
     <string name="fake_user">muzimaphr@user.com</string>
