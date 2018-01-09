@@ -29,6 +29,12 @@
     <!-- Notifications view text -->
     <string name="phr_notifications">PHR Notifications</string>
 
+    <!-- Log In Screen text -->
+    <string name="username_text">Username</string>
+    <string name="password_text">Password</string>
+    <string name="login_text">Login</string>
+    <string name="phr_version_text">version 1.0.1</string>
+
     <!-- mUzima PHR Forms text -->
     <string name="phr_forms_text">PHR Forms</string>
 
