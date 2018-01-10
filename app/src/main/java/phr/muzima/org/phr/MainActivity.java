@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         dataCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(),DataViewActivity.class);
+                Intent intent = new Intent(v.getContext(), DataViewActivity.class);
                 startActivity(intent);
             }
         });
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         formsCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(),FormsViewActivity.class);
+                Intent intent = new Intent(v.getContext(), FormsViewActivity.class);
                 startActivity(intent);
             }
         });
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         profileCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(),ProfileViewActivity.class);
+                Intent intent = new Intent(v.getContext(), ProfileViewActivity.class);
                 startActivity(intent);
             }
         });
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         notificationsCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(),NotificationsActivity.class);
+                Intent intent = new Intent(v.getContext(), NotificationsActivity.class);
                 startActivity(intent);
             }
         });
@@ -82,17 +82,22 @@ public class MainActivity extends AppCompatActivity {
                 /**
                  * Navigation item action code
                  */
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.forms_menu_item:
-                        Intent intent = new Intent(getApplicationContext(),FormsViewActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), FormsViewActivity.class);
                         startActivity(intent);
+                        break;
+                    case R.id.profile_menu_item:
+                        Intent profileIntent = new Intent(getApplicationContext(), ProfileViewActivity.class);
+                        startActivity(profileIntent);
+                    default:
                         break;
                 }
                 return true;
             }
         });
 
-        Toast.makeText(this,"Hello, Welcome to mUzima PHR", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Hello, Welcome to mUzima PHR", Toast.LENGTH_LONG).show();
 
     }
 

@@ -20,12 +20,12 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="32dp"
         android:layout_marginTop="135dp"
-        android:layout_toEndOf="@+id/progressBar"
-        android:text="Initial setup running please wait"
+        android:layout_toEndOf="@+id/initial_setup_progressBar"
+        android:text="@string/initial_set_up_running_text"
         android:textColor="@android:color/white" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/initial_setup_progressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

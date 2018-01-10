@@ -38,10 +38,25 @@
     <!-- mUzima PHR Forms text -->
     <string name="phr_forms_text">PHR Forms</string>
 
+    <!-- mUzima PHR Profile fields text -->
+    <string name="openmrs_id_text">OpenMRS ID</string>
+    <string name="user_first_name_field_text">First Name</string>
+    <string name="user_middle_name_field_text">Middle Name</string>
+    <string name="user_last_name_field_text">Last Name</string>
+    <string name="user_dob_text_field">DoB</string>
+
+    <!-- Initial set up screen text -->
+    <string name="initial_set_up_running_text">Initial Setup running please wait!</string>
+
     <!-- temp text -->
     <string name="fake_user">muzimaphr@user.com</string>
     <string name="notifications_stats_text">2 unread</string>
     <string name="data_stats">Sync started</string>
     <string name="profile_stats">View profile</string>
     <string name="forms_stats">6 Complete 3 Drafts</string>
+    <string name="sample_openmrs_id">Client6745</string>
+    <string name="user_first_name">Joshua</string>
+    <string name="user_last_name">Muliro</string>
+    <string name="user_middle_name">Kiboswaii</string>
+    <string name="user_dob">1993/04/12</string>
 </resources>
