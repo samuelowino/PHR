@@ -1,6 +1,7 @@
 package phr.muzima.org.phr.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import phr.muzima.org.phr.NotificationViewActivity;
 import phr.muzima.org.phr.R;
 import phr.muzima.org.phr.model.Notification;
 
@@ -91,6 +93,15 @@ public class NotificationsAdapter extends BaseAdapter {
         }
 
         viewHolder.notificationTitleTextView.setText(notificationList.get(position).getTitle());
+
+        viewHolder.notificationTitleTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent detailedNotificationViewIntent = new Intent(v.getContext(),NotificationViewActivity.class);
+                detailedNotificationViewIntent.putExtra("notification_body",viewHolder.notificationTitleTextView.getText().toString());
+                v.getContext().startActivity(detailedNotificationViewIntent);
+            }
+        });
 
         return convertView;
     }

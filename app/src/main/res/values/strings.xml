@@ -45,6 +45,8 @@
     <string name="user_last_name_field_text">Last Name</string>
     <string name="user_dob_text_field">DoB</string>
 
+    <!-- phr detailed notifications view -->
+
     <!-- mUzima wrong password text view -->
     <string name="wrong_password_message">Sorry you have entered wrong password/username combination,please try or contact the system administrator for resetting.Sending email to:ellymakuba@gmail.com</string>
 
@@ -62,4 +64,7 @@
     <string name="user_last_name">Muliro</string>
     <string name="user_middle_name">Kiboswaii</string>
     <string name="user_dob">1993/04/12</string>
+    <string name="phre_notification_title_text">Stage II Hypertension</string>
+    <string name="phr_notification_action_text">Refer to clinical officer</string>
+    <string name="phr_form_body_text">Start  HTCTZ 25 mg OD and Amlodipine 5mg OD CONTINUE CURRENT REGIME AND REFER</string>
 </resources>

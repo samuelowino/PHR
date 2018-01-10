@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--suppress AndroidDomInspection -->
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        app:title="@string/phr_notifications"
+        android:id="@+id/detailed_notification_toolbar"
+        app:titleTextAppearance="@style/ToolbarTheme"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <TextView
+        android:id="@+id/notification_title_textView"
+        android:textColor="@android:color/white"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="@string/phre_notification_title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/notification_body_textView"
+        android:padding="16dp"
+        android:text="@string/phr_form_body_text"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/notification_action_button"
+        android:text="@string/phr_notification_action_text"
+        android:background="@color/muzima_theme_blue"
+        android:textColor="@android:color/white"
+        android:padding="16dp"
+        android:layout_margin="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

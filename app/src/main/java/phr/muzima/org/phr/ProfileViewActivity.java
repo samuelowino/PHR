@@ -18,7 +18,7 @@ public class ProfileViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile_view);
 
         collapsingToolbarLayout = findViewById(R.id.profile_collapseit);
-        toolbar = findViewById(R.id.profile_toolbar);
+        toolbar = findViewById(R.id.notifications_toolbar);
         collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(android.R.color.black));
         collapsingToolbarLayout.setTitle(getString(R.string.profile_text));
         collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(android.R.color.black));
