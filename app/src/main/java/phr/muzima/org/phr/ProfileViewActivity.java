@@ -37,6 +37,7 @@ public class ProfileViewActivity extends AppCompatActivity {
         if (item.getItemId() == android.R.id.home) {
             Intent backIntent = new Intent(this, MainActivity.class);
             startActivity(backIntent);
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="phr.muzima.org.phr">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_action_launcher"
@@ -9,23 +11,37 @@
         android:roundIcon="@drawable/ic_action_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".DataViewActivity" />
-        <activity android:name=".FormsViewActivity" />
-        <activity android:name=".ProfileViewActivity" />
-        <activity android:name=".NotificationsActivity" />
-        <activity android:name=".NotificationViewActivity" />
-        <activity android:name=".LoginActivity">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".DataViewActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".FormsViewActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ProfileViewActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".NotificationsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".NotificationViewActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".LoginActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InitialSetupActivity">
-        </activity>
+        <activity
+            android:name=".InitialSetupActivity"
+            android:launchMode="singleTop"></activity>
+        <activity android:name=".WrongPasswordActivity"></activity>
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>

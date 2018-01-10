@@ -40,8 +40,8 @@ public class FormsViewActivity extends AppCompatActivity {
         /**
          * Temp dummy data to be replaced with json payload
          */
-        List<Form> formsList = Arrays.asList( new Form("Diabetes Form"), new Form("HIV Encounter Form"), new Form("Motorcycle Form"));
-        listAdapter = new FormsAdapter(this,formsList);
+        List<Form> formsList = Arrays.asList(new Form("Diabetes Form"), new Form("HIV Encounter Form"), new Form("Motorcycle Form"));
+        listAdapter = new FormsAdapter(this, formsList);
 
         formsListView.setAdapter(listAdapter);
 
@@ -72,6 +72,7 @@ public class FormsViewActivity extends AppCompatActivity {
         if (item.getItemId() == android.R.id.home) {
             Intent mainActivityIntent = new Intent(this, MainActivity.class);
             startActivity(mainActivityIntent);
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }

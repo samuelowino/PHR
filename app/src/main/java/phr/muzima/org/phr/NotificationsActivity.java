@@ -69,6 +69,7 @@ public class NotificationsActivity extends AppCompatActivity {
         if (item.getItemId() == android.R.id.home) {
             Intent mainActivityIntent = new Intent(this, MainActivity.class);
             startActivity(mainActivityIntent);
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }

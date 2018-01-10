@@ -62,11 +62,14 @@
                 android:layout_margin="24dp"
                 android:tooltipText="@string/username_text">
 
-                <TextView
+                <EditText
+                    android:id="@+id/username_editText"
                     android:textColorHint="@android:color/black"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/username_text"
+                    android:textColorHighlight="@android:color/black"
+                    android:inputType="text"
                     android:textColor="@android:color/white" />
 
             </android.support.design.widget.TextInputLayout>
@@ -80,10 +83,12 @@
                 android:layout_marginTop="4dp"
                 android:tooltipText="@string/password_text">
 
-                <TextView
+                <EditText
+                    android:id="@+id/password_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/password_text"
+                    android:inputType="textPassword"
                     android:textColor="@android:color/white" />
 
             </android.support.design.widget.TextInputLayout>

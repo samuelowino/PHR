@@ -45,6 +45,9 @@
     <string name="user_last_name_field_text">Last Name</string>
     <string name="user_dob_text_field">DoB</string>
 
+    <!-- mUzima wrong password text view -->
+    <string name="wrong_password_message">Sorry you have entered wrong password/username combination,please try or contact the system administrator for resetting.Sending email to:ellymakuba@gmail.com</string>
+
     <!-- Initial set up screen text -->
     <string name="initial_set_up_running_text">Initial Setup running please wait!</string>
 
