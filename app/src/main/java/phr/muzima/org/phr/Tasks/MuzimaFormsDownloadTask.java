@@ -5,11 +5,14 @@ import android.os.AsyncTask;
 
 import java.net.URL;
 
+import phr.muzima.org.phr.phrServices.FormDownloadService;
+import phr.muzima.org.phr.phrServices.impl.MuzimaFormController;
+
 /**
  * Created by HP on 1/10/2018.
  */
 
-public class MuzimaFormsDownloadTask extends AsyncTask<URL,Integer,Long> {
+public class MuzimaFormsDownloadTask extends AsyncTask<URL, Integer, Long> {
     /**
      * Override this method to perform a computation on a background thread. The
      * specified parameters are the parameters passed to {@link #execute}
@@ -26,11 +29,15 @@ public class MuzimaFormsDownloadTask extends AsyncTask<URL,Integer,Long> {
      */
     @Override
     protected Long doInBackground(URL... urls) {
+
+        MuzimaFormController muzimaFormController = new MuzimaFormController();
+        muzimaFormController.startDownload();
+
         int count = urls.length;
         long totalFileSize = 0;
         for (int i = 0; i < count; i++) {
-            totalFileSize += DownloadManager.Request.NETWORK_WIFI;
+
         }
-        return null;
+        return 1L;
     }
 }
