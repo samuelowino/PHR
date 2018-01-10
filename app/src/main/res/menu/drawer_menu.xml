@@ -24,6 +24,7 @@
 
     <item
         android:id="@+id/forms_menu_item"
+        android:checkable="true"
         android:icon="@drawable/ic_action_form"
         android:title="@string/forms_text"/>
 

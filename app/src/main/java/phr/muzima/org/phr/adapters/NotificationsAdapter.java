@@ -83,7 +83,7 @@ public class NotificationsAdapter extends BaseAdapter {
         NotificationsAdapter.ViewHolder viewHolder;
 
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.forms_single_row, parent, false);
+            convertView = LayoutInflater.from(context).inflate(R.layout.notifications_single_row, parent, false);
             viewHolder = new NotificationsAdapter.ViewHolder(convertView);
             convertView.setTag(viewHolder);
         } else {

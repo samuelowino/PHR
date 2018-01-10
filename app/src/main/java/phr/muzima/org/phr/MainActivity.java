@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -35,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         landingScreenDrawerLayout = findViewById(R.id.landing_screen_drawer_layout);
         dataCardView = findViewById(R.id.data_cardView);
         formsCardView = findViewById(R.id.forms_cardView);
-        profileCardView = findViewById(R.id.cardView2);
+        profileCardView = findViewById(R.id.profile_cardView);
+        notificationsCardView = findViewById(R.id.notifications_cardView);
         setSupportActionBar(landingScreenToolbar);
 
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, landingScreenDrawerLayout, landingScreenToolbar, R.string.open, R.string.close);
@@ -68,12 +68,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        notificationsCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),NotificationsActivity.class);
+                startActivity(intent);
+            }
+        });
+
         landingScreenNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 /**
                  * Navigation item action code
                  */
+                switch (item.getItemId()){
+                    case R.id.forms_menu_item:
+                        Intent intent = new Intent(getApplicationContext(),FormsViewActivity.class);
+                        startActivity(intent);
+                        break;
+                }
                 return true;
             }
         });

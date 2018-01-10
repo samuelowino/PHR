@@ -28,7 +28,11 @@ public class NotificationsActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.notifications_toolbar);
         setSupportActionBar(toolbar);
-
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setTitle(getString(R.string.phr_notifications));
+        }
         notificationsListView = findViewById(R.id.notifications_list_view);
 
         /**
@@ -36,7 +40,7 @@ public class NotificationsActivity extends AppCompatActivity {
          */
         List<Notification> notificationList = Arrays.asList( new Notification("BDR Visit"), new Notification("CT Scan"), new Notification("Cancer Screening Appointment"));
 
-        notificationsListAdapter = new NotificationsAdapter(this,notificationList);
+        notificationsListAdapter = new NotificationsAdapter(getApplicationContext(),notificationList);
         notificationsListView.setAdapter(notificationsListAdapter);
     }
 
