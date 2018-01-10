@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -32,22 +34,38 @@ public class InitialSetupActivity extends AppCompatActivity {
         initialSetUpProgressBar.setProgressDrawable(progressDrawable);
 
         /**
-         * Start form download
+         * Temporary delay - simulation
          */
-        try {
-            MuzimaFormsDownloadTask muzimaFormsDownloadTask = new MuzimaFormsDownloadTask();
-            muzimaFormsDownloadTask.execute(new URL("https://demo1.muzima.org/w2/rest"));
-        } catch (IOException exception) {
-            Logger.getAnonymousLogger().log(Level.SEVERE,exception.getStackTrace().toString());
-            Snackbar.make(null,exception.getMessage(),Snackbar.LENGTH_LONG).setAction("Go offline", new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(v.getContext(),MainActivity.class);
-                    startActivity(intent);
-                }
-            });
-        }
+         new Timer().schedule(new TimerTask() {
+             @Override
+             public void run() {
+                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                 startActivity(intent);
+             }
+         },10000);
+
+//        /**
+//         * Start form download
+//         */
+//        try {
+//            MuzimaFormsDownloadTask muzimaFormsDownloadTask = new MuzimaFormsDownloadTask();
+//            muzimaFormsDownloadTask.execute(new URL("https://demo1.muzima.org/w2/rest"));
+//        } catch (IOException exception) {
+//            Logger.getAnonymousLogger().log(Level.SEVERE,exception.getStackTrace().toString());
+//            Snackbar.make(null,exception.getMessage(),Snackbar.LENGTH_LONG).setAction("Go offline", new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intent = new Intent(v.getContext(),MainActivity.class);
+//                    startActivity(intent);
+//                }
+//            });
+//        }
 
 
+    }
+
+    public void startLandingPage(View view){
+        Intent intent = new Intent(view.getContext(),MainActivity.class);
+        startActivity(intent);
     }
 }
