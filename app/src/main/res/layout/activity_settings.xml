@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="phr.muzima.org.phr.SettingsActivity">
+
+    <RelativeLayout
+        android:id="@+id/settings_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/openmrs_settings_title_textView"
+            android:textColor="@android:color/white"
+            android:text="@string/phr_notification_action_text"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:ems="12"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/openmrs_setting_item"
+            android:layout_below="@+id/openmrs_settings_title_textView"
+            android:padding="16dp"
+            android:textColor="@android:color/white"
+            android:text="@string/phr_data_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

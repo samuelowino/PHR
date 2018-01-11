@@ -94,15 +94,6 @@ public class NotificationsAdapter extends BaseAdapter {
 
         viewHolder.notificationTitleTextView.setText(notificationList.get(position).getTitle());
 
-        viewHolder.notificationTitleTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent detailedNotificationViewIntent = new Intent(v.getContext(),NotificationViewActivity.class);
-                detailedNotificationViewIntent.putExtra("notification_body",viewHolder.notificationTitleTextView.getText().toString());
-                v.getContext().startActivity(detailedNotificationViewIntent);
-            }
-        });
-
         return convertView;
     }
 
