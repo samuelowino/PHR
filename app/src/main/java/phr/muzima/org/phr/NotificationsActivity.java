@@ -53,11 +53,16 @@ public class NotificationsActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Notification notificationItem = (Notification)parent.getItemAtPosition(position);
+
                 String title = notificationItem.getTitle();
                 String body = notificationItem.getNotificationBody();
+                String action = notificationItem.getAction();
+
                 Intent detailedNotificationViewIntent = new Intent(view.getContext(), NotificationViewActivity.class);
+
                 detailedNotificationViewIntent.putExtra("notification_body", body);
                 detailedNotificationViewIntent.putExtra("notification_title",title);
+                detailedNotificationViewIntent.putExtra("notification_action",action);
                 NotificationsActivity.this.startActivity(detailedNotificationViewIntent);
             }
         });
