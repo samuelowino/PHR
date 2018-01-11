@@ -54,6 +54,15 @@
     <!-- Initial set up screen text -->
     <string name="initial_set_up_running_text">Initial Setup running please wait!</string>
 
+    <!-- settings activity text -->
+    <string name="update_your_profile_text">Update your profile</string>
+    <string name="theme_selection_text">Select theme</string>
+    <string name="show_server_address_text">Show Server Address</string>
+    <string name="media_notification_enabled_text">Enable media notification</string>
+    <string name="auto_upload_enabled_text">Auto-upload enabled</string>
+    <string name="enable_geo_location">Track my location</string>
+    <string name="volume_warning_text">Note:The following volume settings are relative to the device\'s music or volume stream volume</string>
+
     <!-- temp text -->
     <string name="fake_user">muzimaphr@user.com</string>
     <string name="notifications_stats_text">2 unread</string>

@@ -57,17 +57,5 @@
 
     </RelativeLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/profile_edit_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
-        android:background="@android:color/white"
-        android:src="@drawable/ic_action_edit_profile"
-        android:tint="@android:color/white"
-        app:borderWidth="4dp"
-        app:fabSize="normal"
-        app:rippleColor="@color/muzima_theme_blue" />
 
 </android.support.design.widget.CoordinatorLayout>

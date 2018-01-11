@@ -1,36 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="@android:color/black"
-    android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="phr.muzima.org.phr.SettingsActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <RelativeLayout
-        android:id="@+id/settings_layout"
+
+    <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:theme="@style/ToolbarTheme"
+        android:title="@string/phr_wrong_password_text"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/settings_toolbar">
 
-        <TextView
-            android:id="@+id/openmrs_settings_title_textView"
-            android:textColor="@android:color/white"
-            android:text="@string/phr_notification_action_text"
-            android:textStyle="bold"
-            android:padding="16dp"
-            android:ems="12"
-            android:textSize="16sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+    </android.support.v7.widget.Toolbar>
 
-        <TextView
-            android:id="@+id/openmrs_setting_item"
-            android:layout_below="@+id/openmrs_settings_title_textView"
-            android:padding="16dp"
-            android:textColor="@android:color/white"
-            android:text="@string/phr_data_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/about_nested_scrollView"
+        android:layout_below="@+id/settings_toolbar"
+        android:layout_height="wrap_content">
 
-</android.support.v4.widget.NestedScrollView>
+        <include layout="@layout/settings_layout_content"/>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

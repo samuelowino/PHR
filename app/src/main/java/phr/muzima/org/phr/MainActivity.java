@@ -90,6 +90,14 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.profile_menu_item:
                         Intent profileIntent = new Intent(getApplicationContext(), ProfileViewActivity.class);
                         startActivity(profileIntent);
+                    case R.id.primary_notifications_menu_item:
+                        startActivity(new Intent(getApplicationContext(), NotificationsActivity.class));
+                    case R.id.active_notifications_menu_menu_item:
+                        startActivity(new Intent(getApplicationContext(), NotificationsActivity.class));
+                    case R.id.deactivated_notifications_menu_item:
+                        startActivity(new Intent(getApplicationContext(), NotificationsActivity.class));
+                    case R.id.settings_menu_item:
+                        startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
                     default:
                         break;
                 }
