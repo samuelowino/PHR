@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void authenticate(String username,String password){
-        if (username.isEmpty() || password.isEmpty()){
+        if (username.isEmpty() || password.isEmpty() || username.toLowerCase().contains("username")){
             startActivity( new Intent(getApplicationContext(),WrongPasswordActivity.class));
         }else {
             startActivity( new Intent(getApplicationContext(),InitialSetupActivity.class));

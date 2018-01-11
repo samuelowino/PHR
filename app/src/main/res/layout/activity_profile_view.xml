@@ -18,7 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="256dp"
             android:fitsSystemWindows="true"
-            app:contentScrim="@color/colorPrimary"
+            android:background="@android:color/black"
+            app:contentScrim="@color/colorPrimaryDark"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <ImageView
@@ -35,6 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
+                android:theme="@style/ToolbarTheme"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 app:subtitleTextColor="@android:color/white"
                 app:titleTextColor="@android:color/white" />

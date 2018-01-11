@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 public class NotificationViewActivity extends AppCompatActivity {
 
@@ -40,8 +41,17 @@ public class NotificationViewActivity extends AppCompatActivity {
         notificationActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar notificationActionSnackbar = Snackbar.make(v, notificationTitle, Snackbar.LENGTH_LONG);
-
+                Snackbar notificationActionSnackbar = Snackbar.make(v, notificationTitle, Snackbar.LENGTH_LONG)
+                        .setAction(notificationAction, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                /**
+                                 * Show bundled notification from top of the screen indicating action recognition
+                                 */
+                                Toast.makeText(v.getContext(),"mUzima PHR has updated "+notificationTitle+" notification",Toast.LENGTH_LONG).show();
+                            }
+                        });
+                notificationActionSnackbar.show();
             }
         });
 
