@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.support.v7.widget.Toolbar;
+import android.widget.TextView;
 
 import java.util.Arrays;
 import java.util.List;
@@ -51,9 +52,13 @@ public class NotificationsActivity extends AppCompatActivity {
         notificationsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Notification notificationItem = (Notification)parent.getItemAtPosition(position);
+                String title = notificationItem.getTitle();
+                String body = notificationItem.getNotificationBody();
                 Intent detailedNotificationViewIntent = new Intent(view.getContext(), NotificationViewActivity.class);
-                detailedNotificationViewIntent.putExtra("notification_body", parent.getItemAtPosition(position).toString());
-                view.getContext().startActivity(detailedNotificationViewIntent);
+                detailedNotificationViewIntent.putExtra("notification_body", body);
+                detailedNotificationViewIntent.putExtra("notification_title",title);
+                NotificationsActivity.this.startActivity(detailedNotificationViewIntent);
             }
         });
     }
