@@ -20,7 +20,7 @@ public class LoginActivity extends AppCompatActivity {
 
         loginButton = findViewById(R.id.loginbutton);
         username_editTextView = findViewById(R.id.username_editText);
-        password_editTextView = findViewById(R.id.password_edit_text);
+        password_editTextView = findViewById(R.id.password_editText);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
