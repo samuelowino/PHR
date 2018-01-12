@@ -49,7 +49,7 @@
 
     <!-- mUzima wrong password text view -->
     <string name="phr_wrong_password_text">Wrong Password</string>
-    <string name="wrong_password_message">Sorry you have entered wrong password/username combination,please try again or contact the system administrator for resetting.Send email to:serveradmin@host.com</string>
+    <string name="wrong_password_message">Sorry you have entered wrong password/username combination,please try again or contact the system administrator.Send email to:<a href="http://demo1.muzima.org">provider@host.com</a></string>
 
     <!-- Initial set up screen text -->
     <string name="initial_set_up_running_text">Initial Setup running please wait!</string>

@@ -6,15 +6,18 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.method.LinkMovementMethod;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class WrongPasswordActivity extends AppCompatActivity {
 
     Toolbar wrongPasswordToolbar;
     LinearLayout wrongPasswordView;
+    TextView wrongPasswordTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,12 @@ public class WrongPasswordActivity extends AppCompatActivity {
 
         wrongPasswordToolbar = findViewById(R.id.wrong_password_toolbar);
         wrongPasswordView = findViewById(R.id.wrong_paswword_linear_layout);
+        wrongPasswordTextView = findViewById(R.id.wrong_password_message_textView);
+
+        /**
+         * Make the admin link hide url
+         */
+        wrongPasswordTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
         setSupportActionBar(wrongPasswordToolbar);
         if (getSupportActionBar() != null) {
