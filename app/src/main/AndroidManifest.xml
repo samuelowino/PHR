@@ -3,6 +3,8 @@
     package="phr.muzima.org.phr">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -42,7 +44,10 @@
             android:name=".InitialSetupActivity"
             android:launchMode="singleTop" />
         <activity android:name=".WrongPasswordActivity" />
-        <activity android:name=".SettingsActivity"></activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".ClientProfileActivity"></activity>
     </application>
 
 </manifest>

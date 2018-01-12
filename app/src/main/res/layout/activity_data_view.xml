@@ -8,7 +8,7 @@
     tools:context="phr.muzima.org.phr.DataViewActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/provider_entered_toolbar"
+        android:id="@+id/phr_data_toolbar"
         android:background="@color/colorPrimaryDark"
         android:theme="@style/ToolbarTheme"
         app:title="@string/phr_data_text"
@@ -17,7 +17,7 @@
 
     <android.support.v7.widget.CardView
         android:id="@+id/provider_entered_cardView"
-        android:layout_below="@+id/provider_entered_toolbar"
+        android:layout_below="@+id/phr_data_toolbar"
         android:layout_marginStart="@dimen/cardview_compat_inset_shadow"
         android:layout_margin="16dp"
         android:layout_width="match_parent"
@@ -44,7 +44,8 @@
         android:layout_marginStart="@dimen/cardview_compat_inset_shadow"
         android:layout_margin="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/cardView">
 
         <LinearLayout
             android:background="@color/muzima_theme_blue"
@@ -62,6 +63,104 @@
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
+    <TextView
+        android:id="@+id/contacts_header_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cardView"
+        android:layout_marginTop="16dp"
+        android:ems="12"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:text="Connect with your Provider"
+        android:textColor="@color/muzima_theme_blue" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@+id/contacts_header_textView"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/muzima_theme_blue"
+        android:id="@+id/contact_provider_divider_view" />
+
+    <ImageButton
+        android:id="@+id/call_provider_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_alignStart="@+id/contact_provider_divider_view"
+        android:src="@drawable/ic_action_call"
+        android:layout_below="@+id/contact_provider_divider_view"
+        android:layout_marginTop="18dp"
+        android:background="@android:color/black" />
+
+    <ImageButton
+        android:id="@+id/sms_provider_button"
+        android:layout_below="@+id/contact_provider_divider_view"
+        android:padding="8dp"
+        android:layout_marginTop="18dp"
+        android:background="@android:color/black"
+        android:src="@drawable/ic_action_sms"
+        android:layout_toRightOf="@+id/call_provider_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:id="@+id/email_provider_image_button"
+        android:background="@android:color/black"
+        android:layout_below="@+id/contact_provider_divider_view"
+        android:padding="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/sms_provider_button"
+        android:src="@drawable/ic_action_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@+id/sms_provider_button"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/muzima_theme_blue"
+        android:id="@+id/contact_provider_divider_view_maps" />
+
+    <TextView
+        android:id="@+id/track_provider_text"
+        android:textColor="@android:color/white"
+        android:layout_margin="16dp"
+        android:textStyle="italic"
+        android:layout_below="@+id/contact_provider_divider_view_maps"
+        android:text="You can now track you provider\'s location.Drive or walk to the hospital or local clinic where your provider is located."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/locate_provider_textView"
+        android:layout_below="@+id/track_provider_text"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:textColor="@android:color/white"
+        android:text="Click locator to find your provider"
+        android:layout_toLeftOf="@+id/open_google_maps_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:id="@+id/open_google_maps_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/track_provider_text"
+        android:layout_below="@+id/track_provider_text"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="18dp"
+        android:background="@android:color/black"
+        android:padding="4dp"
+        android:src="@drawable/ic_action_maps" />
 
 
 </RelativeLayout>

@@ -83,21 +83,10 @@ public class MainActivity extends AppCompatActivity {
                  * Navigation item action code
                  */
                 switch (item.getItemId()) {
-                    case R.id.forms_menu_item:
-                        Intent intent = new Intent(getApplicationContext(), FormsViewActivity.class);
-                        startActivity(intent);
-                        break;
-                    case R.id.profile_menu_item:
-                        Intent profileIntent = new Intent(getApplicationContext(), ProfileViewActivity.class);
-                        startActivity(profileIntent);
-                    case R.id.primary_notifications_menu_item:
-                        startActivity(new Intent(getApplicationContext(), NotificationsActivity.class));
-                    case R.id.active_notifications_menu_menu_item:
-                        startActivity(new Intent(getApplicationContext(), NotificationsActivity.class));
-                    case R.id.deactivated_notifications_menu_item:
-                        startActivity(new Intent(getApplicationContext(), NotificationsActivity.class));
+                    case R.id.client_profile_menu_item:
+                        startActivity( new Intent(getApplicationContext(),ClientProfileActivity.class));
                     case R.id.settings_menu_item:
-                        startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
+                        startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
                     default:
                         break;
                 }
