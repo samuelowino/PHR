@@ -52,7 +52,7 @@
         android:layout_marginRight="16dp"
         android:layout_below="@+id/welcome_message_textView"
         android:layout_marginTop="16dp"
-        android:background="@android:color/white"
+        android:background="@drawable/curved_shaped_widget_layout"
         android:padding="8dp"
         android:text="@string/username_text" />
 
@@ -66,7 +66,7 @@
         android:inputType="textPassword"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/username_editText"
-        android:background="@android:color/white"
+        android:background="@drawable/curved_shapte_bottom"
         android:text="@string/user_middle_name"
         android:textColor="@android:color/black" />
 
@@ -79,7 +79,7 @@
         android:layout_marginTop="43dp"
         android:layout_marginLeft="18dp"
         android:layout_marginRight="18dp"
-        android:background="@color/muzima_theme_blue"
+        android:background="@drawable/curved_shaped_widget_blue"
         android:text="@string/login_text"
         android:textAllCaps="false"
         android:textColor="@android:color/white" />

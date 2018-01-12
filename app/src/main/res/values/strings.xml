@@ -20,6 +20,11 @@
     <string name="notifications_text">Notifications</string>
     <string name="profile_text">Profile</string>
     <string name="welcome_message_text">For Patients</string>
+    <string name="message_basket_text">Message Busket</string>
+    <string name="clinical_summary_text">Clinical Summary</string>
+    <string name="laboratory_results_text">Laboratory Results</string>
+    <string name="facillity_locator_text">Facility Locator</string>
+    <string name="health_data_text">Health Data</string>
 
     <!-- data category selection view text -->
     <string name="self_entered_data_text">Self entered data</string>
@@ -46,6 +51,8 @@
     <string name="user_dob_text_field">DoB</string>
 
     <!-- phr detailed notifications view -->
+    <string name="confirm_notification_text">Confirm</string>
+    <string name="decline_notification_text">Decline</string>
 
     <!-- mUzima wrong password text view -->
     <string name="phr_wrong_password_text">Wrong Password</string>

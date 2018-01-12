@@ -15,7 +15,8 @@ public class NotificationViewActivity extends AppCompatActivity {
 
     TextView notificationBodyTextView;
     TextView notificationTitleTextView;
-    Button notificationActionButton;
+    Button confirmNotificationActionButton;
+    Button declineNotificationActionButton;
     Toolbar toolbar;
 
     @Override
@@ -25,43 +26,34 @@ public class NotificationViewActivity extends AppCompatActivity {
 
         notificationBodyTextView = findViewById(R.id.notification_body_textView);
         notificationTitleTextView = findViewById(R.id.notification_title_textView);
-        notificationActionButton = findViewById(R.id.notification_action_button);
+        confirmNotificationActionButton = findViewById(R.id.notification_action_button);
+        declineNotificationActionButton = findViewById(R.id.decline_notification_button);
 
         Bundle extras = getIntent().getExtras();
 
         String notificationBody = extras.getString("notification_body");
         String notificationTitle = extras.getString("notification_title");
-        String notificationAction = extras.getString("notification_action");
 
         toolbar = findViewById(R.id.detailed_notification_toolbar);
         setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null){
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setTitle(getResources().getString(R.string.phr_notifications));
         }
 
 
-
         notificationBodyTextView.setText(notificationBody);
         notificationTitleTextView.setText(notificationTitle);
-        notificationActionButton.setText(notificationAction);
 
-        notificationActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar notificationActionSnackbar = Snackbar.make(v, notificationTitle, Snackbar.LENGTH_LONG)
-                        .setAction(notificationAction, new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                /**
-                                 * Show bundled notification from top of the screen indicating action recognition
-                                 */
-                                Toast.makeText(v.getContext(),"mUzima PHR has updated "+notificationTitle+" notification",Toast.LENGTH_LONG).show();
-                            }
-                        });
-                notificationActionSnackbar.show();
-            }
+        confirmNotificationActionButton.setOnClickListener(v -> {
+            Toast.makeText(v.getContext(),"Notification confirmed",Toast.LENGTH_LONG);
+            startActivity( new Intent(v.getContext(),NotificationsActivity.class));
+        });
+
+        declineNotificationActionButton.setOnClickListener(v -> {
+            Toast.makeText(v.getContext(),"Notification declined",Toast.LENGTH_LONG);
+            startActivity( new Intent(v.getContext(),NotificationsActivity.class));
         });
 
     }
@@ -84,7 +76,7 @@ public class NotificationViewActivity extends AppCompatActivity {
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        startActivity( new Intent(getApplicationContext(),NotificationsActivity.class));
+        startActivity(new Intent(getApplicationContext(), NotificationsActivity.class));
         return super.onOptionsItemSelected(item);
     }
 }

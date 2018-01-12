@@ -12,7 +12,16 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import phr.muzima.org.phr.adapters.LandingMenuListAdapter;
+import phr.muzima.org.phr.model.LandingMenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,10 +29,9 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout landingScreenDrawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView landingScreenNavigationView;
-    CardView dataCardView;
-    CardView profileCardView;
-    CardView formsCardView;
-    CardView notificationsCardView;
+    ListView menuItemsListView;
+    ListAdapter menuItemsListViewListAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +40,8 @@ public class MainActivity extends AppCompatActivity {
 
         landingScreenToolbar = findViewById(R.id.landing_screen_toolbar);
         landingScreenDrawerLayout = findViewById(R.id.landing_screen_drawer_layout);
-        dataCardView = findViewById(R.id.data_cardView);
-        formsCardView = findViewById(R.id.forms_cardView);
-        profileCardView = findViewById(R.id.profile_cardView);
-        notificationsCardView = findViewById(R.id.notifications_cardView);
+        menuItemsListView = findViewById(R.id.landing_page_listView);
+
         setSupportActionBar(landingScreenToolbar);
 
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, landingScreenDrawerLayout, landingScreenToolbar, R.string.open, R.string.close);
@@ -44,37 +50,11 @@ public class MainActivity extends AppCompatActivity {
         landingScreenDrawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
-        dataCardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), DataViewActivity.class);
-                startActivity(intent);
-            }
-        });
+        List<LandingMenuItem> landingMenuItemList = Arrays.asList(
+                new LandingMenuItem("Message Busket",R.drawable.ic_action_notifications_busket)
+        );
+        menuItemsListViewListAdapter =  new LandingMenuListAdapter(this,landingMenuItemList);
 
-        formsCardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), FormsViewActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        profileCardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), ProfileViewActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        notificationsCardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), NotificationsActivity.class);
-                startActivity(intent);
-            }
-        });
 
         landingScreenNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override

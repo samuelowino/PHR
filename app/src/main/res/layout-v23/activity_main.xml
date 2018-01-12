@@ -21,14 +21,15 @@
 
         </android.support.v7.widget.Toolbar>
 
-        <RelativeLayout
+        <android.support.v4.widget.NestedScrollView
             android:id="@+id/landing_page_relative_layout"
             android:layout_width="match_parent"
+            android:background="@android:color/black"
             android:layout_height="match_parent">
 
             <include layout="@layout/landing_page_layout"/>
 
-        </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
     </LinearLayout>
 
     <android.support.design.widget.NavigationView

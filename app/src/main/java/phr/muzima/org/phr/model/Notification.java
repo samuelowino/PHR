@@ -8,20 +8,10 @@ public class Notification {
 
     private String title;
     private String notificationBody;
-    private String action;
 
-    public Notification(String title, String notificationBody, String action) {
+    public Notification(String title, String notificationBody) {
         this.title = title;
         this.notificationBody = notificationBody;
-        this.action = action;
-    }
-
-    public String getAction() {
-        return action;
-    }
-
-    public void setAction(String action) {
-        this.action = action;
     }
 
     public String getNotificationBody() {

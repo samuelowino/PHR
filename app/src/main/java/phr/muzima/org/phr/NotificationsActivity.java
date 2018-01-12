@@ -42,9 +42,9 @@ public class NotificationsActivity extends AppCompatActivity {
          * Dummy data
          */
         List<Notification> notificationList = Arrays.asList(
-                new Notification("CT Scan", "You have an CT scan appointment on Fri 30 2017 at The Eldoret Kenya Cancer Center", "Reschedule Appoinment"),
-                new Notification("BDR Test", "The results for the BDR test you took at the Marta Hospital Nairobi are ready for collecting", "Book Appointment with Physician"),
-                new Notification("Chemo Therapy Weekly Appointment", "Your weekly chemotherapy appointment is on 15 Aug 2018", "GOT IT !"));
+                new Notification("CT Scan", "You have an CT scan appointment on Fri 30 2017 at The Eldoret Kenya Cancer Center"),
+                new Notification("BDR Test", "The results for the BDR test you took at the Marta Hospital Nairobi are ready for collecting"),
+                new Notification("Chemo Therapy Weekly Appointment", "Your weekly chemotherapy appointment is on 15 Aug 2018"));
 
         notificationsListAdapter = new NotificationsAdapter(getApplicationContext(), notificationList);
         notificationsListView.setAdapter(notificationsListAdapter);
@@ -56,13 +56,11 @@ public class NotificationsActivity extends AppCompatActivity {
 
                 String title = notificationItem.getTitle();
                 String body = notificationItem.getNotificationBody();
-                String action = notificationItem.getAction();
 
                 Intent detailedNotificationViewIntent = new Intent(view.getContext(), NotificationViewActivity.class);
 
                 detailedNotificationViewIntent.putExtra("notification_body", body);
                 detailedNotificationViewIntent.putExtra("notification_title",title);
-                detailedNotificationViewIntent.putExtra("notification_action",action);
                 NotificationsActivity.this.startActivity(detailedNotificationViewIntent);
             }
         });
